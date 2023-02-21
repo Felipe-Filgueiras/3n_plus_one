@@ -2,15 +2,23 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def n_mais_um():
-    num = input("Insira o número inicial: ")
-    trigger = True
+    trigger1 = True
+    trigger2 = True
     num_list = []
+    while trigger1:
+        num = input("Insira o número inicial: ")
+        if num.isnumeric() == True:
+            break
+        else:
+            print("Insira um valor válido!! ")
+            continue
 
-    while trigger:
+
+    while trigger2:
         num = int(num)
         num_list.append(num)
         if num == 1:
-            trigger = False
+            trigger2 = False
             continue
         if (num % 2) == 0:
             num = num/2
